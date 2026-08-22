@@ -14,11 +14,10 @@ export const company = {
   court: '[Registergericht]',
   vatId: '[Umsatzsteuer-ID]',
   meta: {
-    title: 'Mentroo – Den richtigen Fachbetrieb finden',
+    title: 'Mentroo – Ihr Auftrag, der passende Fachbetrieb',
     description:
-      'Sie haben einen Auftrag? Mentroo findet den passenden Fachbetrieb für Reinigung, Sanierung, Rohrreinigung, Heizung, Transport und mehr — kostenlos und unverbindlich.',
+      'Mentroo vermittelt Aufträge für Reinigung, Sanierung, Rohr & Sanitär, Heizung, Transport und mehr an geprüfte Fachbetriebe. Anfrage kostenlos und unverbindlich stellen.',
     url: 'https://mentroo.de',
-    ogImage: 'https://mentroo.de/og-image.jpg',
   },
   socials: {
     linkedin: '',
