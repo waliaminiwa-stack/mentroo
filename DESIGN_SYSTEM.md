@@ -39,11 +39,28 @@ Hero (CTA) → ForBusinesses → FAQ → ContactForm
 
 | Name         | Hex       | Tailwind Token      | Verwendung                                          |
 |--------------|-----------|---------------------|-----------------------------------------------------|
-| Brand Dark   | `#15253d` | `brand.dark`        | Primäre Dunkelfarbe; Headlines, dunkle Sections     |
-| Brand Accent | `#639339` | `signal` / `signal.DEFAULT` | CTAs, aktive States, Hover-Akzente, Erfolg   |
-| Accent Hover | `#567d31` | `signal.dark`       | CTA Hover, aktive Links                             |
+| Brand Dark   | `#14325F` | `brand.dark`        | Primäre Dunkelfarbe; Headlines, dunkle Sections     |
+| CI-Grün      | `#B3F600` | `signal` / `signal.DEFAULT` | CTAs (Fläche), dunkle Sections, Akzent-Icons |
+| CI-Grün Hover| `#9cd600` | `signal.dark`       | CTA Hover auf dunklem Hintergrund                   |
 | Void         | `#08090A` | `void`              | Sektionshintergründe dunkel, Footer                 |
 | Error        | `#EF4444` | (Tailwind red-500)  | Fehlermeldungen                                     |
+
+### Kontrast-Regel CI-Grün (WCAG AA)
+
+**Das helle CI-Grün (`#B3F600`) darf auf hellen/weißen Hintergründen NICHT als Text- oder dünne Border-Farbe verwendet werden.**
+Grund: Kontrastverhältnis Limone/Weiß ≈ 1.6:1 — weit unter WCAG AA (4.5:1 Text, 3:1 UI).
+
+| Kontext | Erlaubt | Nicht erlaubt |
+|---------|---------|---------------|
+| Dunkler Hintergrund (`bg-brand-dark`, `bg-void`) | `text-signal`, `border-signal` | — |
+| CTA-Button (großflächig) | `bg-signal text-void` | — |
+| Heller Hintergrund (weiß, `canvas`, `shade`) | `bg-signal text-void` (Fläche), Akzent-Icons (dekorativ) | `text-signal`, `border-signal` als Text/dünne Border |
+
+**Auf hellen Hintergründen für aktive/ausgewählte Zustände stattdessen verwenden:**
+- Border: `border-2 border-brand-dark` (2 px, min. 12:1 Kontrast)
+- Text: `text-brand-dark` (12:1 auf Weiß)
+- Hintergrund-Tint: `bg-brand-dark/5` bis `bg-brand-dark/8`
+- Input-Fokus-Ring: `border-brand-dark` + `box-shadow: 0 0 0 3px rgba(20,50,95,0.12)`
 
 ---
 

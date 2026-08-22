@@ -39,9 +39,9 @@ function StepIndicator({ current }: { current: number }) {
             <div
               className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold font-display transition-all duration-300 ${
                 done
-                  ? 'bg-signal text-void'
+                  ? 'bg-brand-dark/15 text-brand-dark'
                   : active
-                  ? 'bg-white text-ink ring-2 ring-signal ring-offset-2 ring-offset-white shadow-[0_2px_8px_rgba(179,246,0,0.2)]'
+                  ? 'bg-brand-dark text-white shadow-sm'
                   : 'bg-shade text-ink-lo'
               }`}
               aria-label={`Schritt ${step}: ${label}${done ? ' (abgeschlossen)' : active ? ' (aktiv)' : ''}`}
@@ -51,7 +51,7 @@ function StepIndicator({ current }: { current: number }) {
             {i < STEPS.length - 1 && (
               <div
                 className={`h-px w-6 transition-colors duration-300 ${
-                  current > step ? 'bg-signal' : 'bg-ink/[0.12]'
+                  current > step ? 'bg-brand-dark/40' : 'bg-ink/[0.12]'
                 }`}
               />
             )}
@@ -176,8 +176,8 @@ export default function RequestFlow() {
                 transition={{ duration: 0.4, ease: EASE }}
                 className="text-center py-8"
               >
-                <div className="w-16 h-16 rounded-full bg-signal/10 flex items-center justify-center mx-auto mb-5">
-                  <CheckCircle2 size={32} className="text-signal" />
+                <div className="w-16 h-16 rounded-full bg-brand-dark/[0.08] flex items-center justify-center mx-auto mb-5">
+                  <CheckCircle2 size={32} className="text-brand-dark" />
                 </div>
                 <h3 className="font-display font-bold text-2xl text-ink mb-3">
                   Anfrage eingegangen
@@ -219,8 +219,8 @@ export default function RequestFlow() {
                                 onClick={() => set('category', cat.label)}
                                 className={`flex flex-col items-center gap-2.5 rounded-xl border p-4 text-sm font-medium transition-all duration-200 ${
                                   selected
-                                    ? 'border-signal bg-signal/10 text-signal shadow-[0_0_0_1px_rgba(179,246,0,0.3)]'
-                                    : 'border-ink/[0.12] text-ink-mid hover:border-signal/40 hover:text-signal bg-canvas'
+                                    ? 'border-2 border-brand-dark bg-brand-dark/[0.05] text-brand-dark'
+                                    : 'border-ink/[0.12] text-ink-mid hover:border-brand-dark/30 hover:text-brand-dark bg-canvas'
                                 }`}
                               >
                                 <Icon size={22} strokeWidth={1.75} />
@@ -310,8 +310,8 @@ export default function RequestFlow() {
                                   onClick={() => set('timeframe', selected ? '' : option)}
                                   className={`text-left rounded-xl border px-4 py-3 text-sm font-medium transition-all duration-200 ${
                                     selected
-                                      ? 'border-signal bg-signal/10 text-signal shadow-[0_0_0_1px_rgba(179,246,0,0.3)]'
-                                      : 'border-ink/[0.12] text-ink-mid bg-canvas hover:border-signal/40 hover:text-signal'
+                                      ? 'border-2 border-brand-dark bg-brand-dark/[0.05] text-brand-dark font-semibold'
+                                      : 'border-ink/[0.12] text-ink-mid bg-canvas hover:border-brand-dark/30 hover:text-brand-dark'
                                   }`}
                                 >
                                   {option}
@@ -413,7 +413,7 @@ export default function RequestFlow() {
                         <p className="mt-5 text-xs text-ink-lo leading-relaxed">
                           Mit dem Absenden stimmen Sie zu, dass Ihre Daten zur Bearbeitung
                           Ihrer Anfrage genutzt werden.{' '}
-                          <a href="/datenschutz" className="text-signal hover:underline">
+                          <a href="/datenschutz" className="text-brand-dark font-medium hover:underline underline-offset-2">
                             Datenschutzerklärung
                           </a>
                         </p>

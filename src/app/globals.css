@@ -87,8 +87,8 @@ input, textarea, select {
   border-color: rgba(21, 37, 61, 0.22);
 }
 .input-light:focus {
-  border-color: #B3F600;
-  box-shadow: 0 0 0 3px rgba(179, 246, 0, 0.18);
+  border-color: #14325F;
+  box-shadow: 0 0 0 3px rgba(20, 50, 95, 0.12);
 }
 
 /* Glow utilities */
