@@ -8,15 +8,15 @@ const config: Config = {
         // Brand CI
         void: '#08090A',
         brand: {
-          dark: '#15253d',
-          'dark-muted': '#1e3356',
+          dark: '#14325F',
+          'dark-muted': '#1c3f74',
         },
         signal: {
-          DEFAULT: '#639339',
-          dark: '#567d31',
-          darker: '#4a6d29',
-          light: '#d4edb4',
-          muted: '#8ab862',
+          DEFAULT: '#B3F600',
+          dark: '#9cd600',
+          darker: '#85b800',
+          light: '#eaffa0',
+          muted: '#c8f040',
         },
         // Dark surface system
         surface: {
@@ -41,12 +41,15 @@ const config: Config = {
         },
         // Borders — dark sections
         border: {
-          DEFAULT: 'rgba(255,255,255,0.06)',
+          DEFAULT: 'rgba(255,255,255,0.30)',
           subtle: 'rgba(255,255,255,0.04)',
           strong: 'rgba(255,255,255,0.10)',
         },
         // Keep mist for backward compat on inputs
         mist: '#F7F8FB',
+      },
+      borderColor: {
+        DEFAULT: 'rgba(255,255,255,0.30)',
       },
       fontFamily: {
         display: ['var(--font-grotesk)', 'sans-serif'],

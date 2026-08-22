@@ -18,7 +18,7 @@ export default function Marquee() {
         {[...ITEMS, ...ITEMS].map((item, i) => (
           <span
             key={i}
-            className="inline-flex items-center gap-6 px-7 text-[0.7rem] font-semibold text-white/25 uppercase tracking-[0.22em]"
+            className="inline-flex items-center gap-6 px-7 text-[0.7rem] font-semibold text-white uppercase tracking-[0.22em]"
           >
             {item}
             <span className="w-[3px] h-[3px] rounded-full bg-white/18 flex-shrink-0" />

@@ -364,7 +364,7 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-signal hover:bg-signal-dark active:scale-[0.98] disabled:opacity-60 text-void font-semibold text-base px-8 py-3.5 rounded-full transition-all duration-200 shadow-[0_6px_25px_rgba(99,147,57,0.3)] hover:shadow-[0_8px_30px_rgba(99,147,57,0.4)]"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-signal hover:bg-signal-dark active:scale-[0.98] disabled:opacity-60 text-void font-semibold text-base px-8 py-3.5 rounded-full transition-all duration-200 shadow-[0_6px_25px_rgba(179,246,0,0.3)] hover:shadow-[0_8px_30px_rgba(179,246,0,0.4)]"
                 >
                   {loading ? 'Wird gesendet…' : 'Anfrage absenden'}
                 </button>

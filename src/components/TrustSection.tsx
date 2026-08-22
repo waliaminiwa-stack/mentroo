@@ -40,7 +40,7 @@ export default function TrustSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.65, ease: EASE }}
-          className="mb-20 lg:mb-24"
+          className="mb-14 lg:mb-16"
         >
           <span className="text-signal text-xs font-semibold uppercase tracking-[0.2em] block mb-5">
             06 — Versprechen
@@ -51,8 +51,8 @@ export default function TrustSection() {
           </h2>
         </motion.div>
 
-        {/* Editorial list */}
-        <div className="border-t border-ink/[0.09]">
+        {/* Card grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {statements.map((item, i) => {
             const Icon = item.icon
             return (
@@ -61,20 +61,20 @@ export default function TrustSection() {
                 initial={reduced ? {} : { opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 0.55, delay: i * 0.08, ease: EASE }}
-                className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-6 lg:gap-20 py-10 border-b border-ink/[0.09] group"
+                transition={{ duration: 0.55, delay: i * 0.09, ease: EASE }}
+                className="card-light p-6 flex flex-col gap-4"
               >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-signal/10 flex items-center justify-center group-hover:bg-signal/18 transition-colors duration-300 mt-0.5">
-                    <Icon size={19} className="text-signal" strokeWidth={1.75} />
-                  </div>
-                  <h3 className="font-display font-bold text-ink text-xl lg:text-2xl leading-tight pt-1">
+                <div className="w-10 h-10 rounded-xl bg-signal/10 flex items-center justify-center flex-shrink-0">
+                  <Icon size={19} className="text-signal" strokeWidth={1.75} />
+                </div>
+                <div>
+                  <h3 className="font-display font-bold text-ink text-base leading-snug mb-2">
                     {item.title}
                   </h3>
+                  <p className="text-ink-mid text-sm leading-relaxed">
+                    {item.body}
+                  </p>
                 </div>
-                <p className="text-ink-mid text-base leading-relaxed lg:pt-1.5 max-w-2xl">
-                  {item.body}
-                </p>
               </motion.div>
             )
           })}

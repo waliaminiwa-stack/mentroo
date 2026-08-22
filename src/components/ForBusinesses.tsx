@@ -128,7 +128,7 @@ export default function ForBusinesses() {
               </p>
               <a
                 href="#kontakt"
-                className="btn-dual group inline-flex items-center bg-signal hover:bg-signal-dark text-void font-semibold text-base rounded-full overflow-hidden transition-colors duration-250 shadow-[0_6px_25px_rgba(99,147,57,0.32)] hover:shadow-[0_8px_30px_rgba(99,147,57,0.42)]"
+                className="btn-dual group inline-flex items-center bg-signal hover:bg-signal-dark text-void font-semibold text-base rounded-full overflow-hidden transition-colors duration-250 shadow-[0_6px_25px_rgba(179,246,0,0.32)] hover:shadow-[0_8px_30px_rgba(179,246,0,0.42)]"
               >
                 <span className="btn-icon-slot" aria-hidden="true">
                   <ArrowRight size={16} />

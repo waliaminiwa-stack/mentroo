@@ -78,7 +78,7 @@ export default function HowItWorks() {
 
                 {/* Left: number + icon */}
                 <div className="flex lg:flex-col items-center lg:items-start gap-5 lg:gap-4 lg:pl-4 group-hover:pl-6 transition-all duration-300">
-                  <span className="font-display font-extrabold text-7xl lg:text-8xl text-ink/[0.07] group-hover:text-signal/15 transition-colors duration-500 leading-none select-none tabular-nums">
+                  <span className="font-display font-extrabold text-7xl lg:text-8xl text-ink/20 group-hover:text-signal/20 transition-colors duration-500 leading-none select-none tabular-nums">
                     {step.number}
                   </span>
                   <div className="w-11 h-11 rounded-xl bg-signal/10 flex items-center justify-center group-hover:bg-signal/18 transition-colors duration-300 flex-shrink-0">
@@ -110,7 +110,7 @@ export default function HowItWorks() {
         >
           <a
             href="#auftrag"
-            className="btn-dual group inline-flex items-center bg-signal hover:bg-signal-dark text-void font-semibold text-base rounded-full overflow-hidden transition-colors duration-250 shadow-[0_6px_25px_rgba(99,147,57,0.32)] hover:shadow-[0_8px_30px_rgba(99,147,57,0.42)]"
+            className="btn-dual group inline-flex items-center bg-signal hover:bg-signal-dark text-void font-semibold text-base rounded-full overflow-hidden transition-colors duration-250 shadow-[0_6px_25px_rgba(179,246,0,0.32)] hover:shadow-[0_8px_30px_rgba(179,246,0,0.42)]"
           >
             <span className="btn-icon-slot" aria-hidden="true">
               <ArrowRight size={16} />

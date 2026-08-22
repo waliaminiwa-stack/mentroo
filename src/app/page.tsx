@@ -26,10 +26,10 @@ export default function Home() {
         <HowItWorks />
         <ForBusinesses />
         <TrustSection />
-        <FAQ />
         <CTABanner />
         <RequestFlow />
         <ContactForm />
+        <FAQ />
       </main>
       <Footer />
     </>

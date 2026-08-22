@@ -64,7 +64,7 @@ export default function Navbar() {
           {/* Desktop CTA — dual-icon pill */}
           <a
             href="#auftrag"
-            className="btn-dual group hidden md:inline-flex items-center bg-signal hover:bg-signal-dark text-void text-sm font-semibold rounded-full overflow-hidden transition-colors duration-250 shadow-[0_4px_20px_rgba(99,147,57,0.25)] hover:shadow-[0_6px_28px_rgba(99,147,57,0.35)]"
+            className="btn-dual group hidden md:inline-flex items-center bg-signal hover:bg-signal-dark text-void text-sm font-semibold rounded-full overflow-hidden transition-colors duration-250 shadow-[0_4px_20px_rgba(179,246,0,0.25)] hover:shadow-[0_6px_28px_rgba(179,246,0,0.35)]"
           >
             <span className="btn-icon-slot !h-9" aria-hidden="true">
               <ArrowRight size={14} />
@@ -119,7 +119,7 @@ export default function Navbar() {
               <a
                 href="#auftrag"
                 onClick={() => setMenuOpen(false)}
-                className="w-full text-center bg-signal text-void font-semibold py-4 rounded-full text-lg shadow-[0_4px_24px_rgba(99,147,57,0.35)]"
+                className="w-full text-center bg-signal text-void font-semibold py-4 rounded-full text-lg shadow-[0_4px_24px_rgba(179,246,0,0.35)]"
               >
                 Auftrag anfragen
               </a>

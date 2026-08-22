@@ -41,7 +41,7 @@ function StepIndicator({ current }: { current: number }) {
                 done
                   ? 'bg-signal text-void'
                   : active
-                  ? 'bg-white text-ink ring-2 ring-signal ring-offset-2 ring-offset-white shadow-[0_2px_8px_rgba(99,147,57,0.2)]'
+                  ? 'bg-white text-ink ring-2 ring-signal ring-offset-2 ring-offset-white shadow-[0_2px_8px_rgba(179,246,0,0.2)]'
                   : 'bg-shade text-ink-lo'
               }`}
               aria-label={`Schritt ${step}: ${label}${done ? ' (abgeschlossen)' : active ? ' (aktiv)' : ''}`}
@@ -219,7 +219,7 @@ export default function RequestFlow() {
                                 onClick={() => set('category', cat.label)}
                                 className={`flex flex-col items-center gap-2.5 rounded-xl border p-4 text-sm font-medium transition-all duration-200 ${
                                   selected
-                                    ? 'border-signal bg-signal/10 text-signal shadow-[0_0_0_1px_rgba(99,147,57,0.3)]'
+                                    ? 'border-signal bg-signal/10 text-signal shadow-[0_0_0_1px_rgba(179,246,0,0.3)]'
                                     : 'border-ink/[0.12] text-ink-mid hover:border-signal/40 hover:text-signal bg-canvas'
                                 }`}
                               >
@@ -310,7 +310,7 @@ export default function RequestFlow() {
                                   onClick={() => set('timeframe', selected ? '' : option)}
                                   className={`text-left rounded-xl border px-4 py-3 text-sm font-medium transition-all duration-200 ${
                                     selected
-                                      ? 'border-signal bg-signal/10 text-signal shadow-[0_0_0_1px_rgba(99,147,57,0.3)]'
+                                      ? 'border-signal bg-signal/10 text-signal shadow-[0_0_0_1px_rgba(179,246,0,0.3)]'
                                       : 'border-ink/[0.12] text-ink-mid bg-canvas hover:border-signal/40 hover:text-signal'
                                   }`}
                                 >
@@ -441,7 +441,7 @@ export default function RequestFlow() {
                     <button
                       type="button"
                       onClick={handleNext}
-                      className="inline-flex items-center gap-2 bg-signal hover:bg-signal-dark active:scale-[0.98] text-void font-semibold text-sm px-6 py-3 rounded-full transition-all duration-200 shadow-[0_4px_16px_rgba(99,147,57,0.3)]"
+                      className="inline-flex items-center gap-2 bg-signal hover:bg-signal-dark active:scale-[0.98] text-void font-semibold text-sm px-6 py-3 rounded-full transition-all duration-200 shadow-[0_4px_16px_rgba(179,246,0,0.3)]"
                     >
                       Weiter
                     </button>
@@ -450,7 +450,7 @@ export default function RequestFlow() {
                       type="button"
                       onClick={handleSubmit}
                       disabled={loading}
-                      className="inline-flex items-center gap-2 bg-signal hover:bg-signal-dark active:scale-[0.98] disabled:opacity-60 text-void font-semibold text-sm px-6 py-3 rounded-full transition-all duration-200 shadow-[0_4px_16px_rgba(99,147,57,0.3)]"
+                      className="inline-flex items-center gap-2 bg-signal hover:bg-signal-dark active:scale-[0.98] disabled:opacity-60 text-void font-semibold text-sm px-6 py-3 rounded-full transition-all duration-200 shadow-[0_4px_16px_rgba(179,246,0,0.3)]"
                     >
                       {loading ? 'Wird gesendet…' : 'Anfrage absenden'}
                     </button>

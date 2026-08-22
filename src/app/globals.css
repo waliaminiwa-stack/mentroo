@@ -4,8 +4,8 @@
 
 :root {
   --c-void: #08090A;
-  --c-signal: #639339;
-  --c-signal-dark: #567d31;
+  --c-signal: #B3F600;
+  --c-signal-dark: #9cd600;
   --c-surface: #0F1113;
   --c-surface-1: #101214;
   --ease-out-apple: cubic-bezier(0.21, 0.47, 0.32, 0.98);
@@ -62,7 +62,7 @@ input, textarea, select {
   transition: box-shadow 0.25s ease, transform 0.2s ease, border-color 0.2s ease;
 }
 .card-light:hover {
-  border-color: rgba(21, 37, 61, 0.14);
+  border-color: rgba(179, 246, 0, 0.35);
   box-shadow: 0 4px 16px rgba(21, 37, 61, 0.10), 0 1px 3px rgba(21, 37, 61, 0.05);
   transform: translateY(-2px);
 }
@@ -87,19 +87,19 @@ input, textarea, select {
   border-color: rgba(21, 37, 61, 0.22);
 }
 .input-light:focus {
-  border-color: #639339;
-  box-shadow: 0 0 0 3px rgba(99, 147, 57, 0.15);
+  border-color: #B3F600;
+  box-shadow: 0 0 0 3px rgba(179, 246, 0, 0.18);
 }
 
 /* Glow utilities */
 .glow-signal-sm {
-  box-shadow: 0 0 20px rgba(99, 147, 57, 0.12);
+  box-shadow: 0 0 20px rgba(179, 246, 0, 0.15);
 }
 .glow-signal-md {
-  box-shadow: 0 0 40px rgba(99, 147, 57, 0.15), 0 0 80px rgba(99, 147, 57, 0.06);
+  box-shadow: 0 0 40px rgba(179, 246, 0, 0.18), 0 0 80px rgba(179, 246, 0, 0.08);
 }
 .glow-signal-lg {
-  box-shadow: 0 0 60px rgba(99, 147, 57, 0.2), 0 0 120px rgba(99, 147, 57, 0.08);
+  box-shadow: 0 0 60px rgba(179, 246, 0, 0.22), 0 0 120px rgba(179, 246, 0, 0.10);
 }
 
 /* Premium card border highlight on hover */
@@ -111,12 +111,12 @@ input, textarea, select {
 }
 .card-dark:hover {
   background-color: #141618;
-  border-color: rgba(255, 255, 255, 0.11);
+  border-color: rgba(179, 246, 0, 0.25);
 }
 
 /* Section ambient radial – can be applied to section wrapper */
 .ambient-brand {
-  background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(99, 147, 57, 0.07) 0%, transparent 70%);
+  background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(179, 246, 0, 0.06) 0%, transparent 70%);
 }
 
 /* Horizontal scroll utility */

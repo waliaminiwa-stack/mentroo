@@ -31,7 +31,7 @@ function FlowStep({
       transition={{ duration: 0.65, delay, ease: EASE }}
       className={`relative rounded-2xl px-6 py-5 border ${
         accent
-          ? 'bg-signal/10 border-signal/40 shadow-[0_0_48px_rgba(99,147,57,0.18)]'
+          ? 'bg-signal/10 border-signal/40 shadow-[0_0_48px_rgba(179,246,0,0.18)]'
           : 'bg-white/5 border-white/10'
       }`}
     >
@@ -77,7 +77,7 @@ export default function Hero() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 55% 70% at 100% 45%, rgba(99,147,57,0.07) 0%, transparent 65%), radial-gradient(ellipse 45% 55% at 5% 55%, rgba(21,37,61,0.25) 0%, transparent 60%)',
+            'radial-gradient(ellipse 55% 70% at 100% 45%, rgba(179,246,0,0.07) 0%, transparent 65%), radial-gradient(ellipse 45% 55% at 5% 55%, rgba(21,37,61,0.25) 0%, transparent 60%)',
         }}
         aria-hidden="true"
       />
@@ -150,7 +150,7 @@ export default function Hero() {
             {/* Primary — dual-icon pill */}
             <a
               href="#auftrag"
-              className="btn-dual group inline-flex items-center bg-signal hover:bg-signal-dark text-void font-semibold text-base rounded-full overflow-hidden transition-colors duration-250 shadow-[0_6px_28px_rgba(99,147,57,0.38)] hover:shadow-[0_8px_32px_rgba(99,147,57,0.48)]"
+              className="btn-dual group inline-flex items-center bg-signal hover:bg-signal-dark text-void font-semibold text-base rounded-full overflow-hidden transition-colors duration-250 shadow-[0_6px_28px_rgba(179,246,0,0.38)] hover:shadow-[0_8px_32px_rgba(179,246,0,0.48)]"
             >
               <span className="btn-icon-slot" aria-hidden="true">
                 <ArrowRight size={16} />
@@ -203,7 +203,7 @@ export default function Hero() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         aria-hidden="true"
       >
-        <span className="text-white/25 text-[0.65rem] tracking-[0.28em] uppercase">Scroll</span>
+        <span className="text-white/60 text-[0.65rem] tracking-[0.28em] uppercase">Scroll</span>
         <div className="w-px h-8 bg-gradient-to-b from-white/20 to-transparent" />
       </motion.div>
     </section>

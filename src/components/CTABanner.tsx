@@ -15,7 +15,7 @@ export default function CTABanner() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 60% 70% at 50% 50%, rgba(99,147,57,0.08) 0%, transparent 65%)',
+            'radial-gradient(ellipse 60% 70% at 50% 50%, rgba(179,246,0,0.08) 0%, transparent 65%)',
         }}
         aria-hidden="true"
       />
@@ -43,7 +43,7 @@ export default function CTABanner() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#auftrag"
-              className="btn-dual group inline-flex items-center bg-signal hover:bg-signal-dark text-void font-semibold text-base rounded-full overflow-hidden transition-colors duration-250 shadow-[0_8px_32px_rgba(99,147,57,0.38)] hover:shadow-[0_12px_40px_rgba(99,147,57,0.48)]"
+              className="btn-dual group inline-flex items-center bg-signal hover:bg-signal-dark text-void font-semibold text-base rounded-full overflow-hidden transition-colors duration-250 shadow-[0_8px_32px_rgba(179,246,0,0.38)] hover:shadow-[0_12px_40px_rgba(179,246,0,0.48)]"
             >
               <span className="btn-icon-slot" aria-hidden="true">
                 <ArrowRight size={16} />

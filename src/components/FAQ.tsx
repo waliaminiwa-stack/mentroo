@@ -59,7 +59,7 @@ export default function FAQ() {
           className="text-center mb-14"
         >
           <span className="text-signal text-xs font-semibold uppercase tracking-[0.2em]">
-            07 — FAQ
+            09 — FAQ
           </span>
           <h2 className="font-display font-extrabold text-ink text-4xl sm:text-5xl mt-4 leading-[1.08] tracking-tight">
             Häufige Fragen.
@@ -81,7 +81,7 @@ export default function FAQ() {
                 key={i}
                 className={`rounded-xl border overflow-hidden transition-all duration-250 ${
                   isOpen
-                    ? 'border-signal/25 bg-signal/[0.03] shadow-[0_2px_12px_rgba(99,147,57,0.08)]'
+                    ? 'border-signal/25 bg-signal/[0.03] shadow-[0_2px_12px_rgba(179,246,0,0.08)]'
                     : 'border-ink/[0.09] bg-white hover:border-ink/[0.16] shadow-[0_1px_3px_rgba(21,37,61,0.05)]'
                 }`}
               >
