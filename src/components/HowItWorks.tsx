@@ -50,7 +50,7 @@ export default function HowItWorks() {
           transition={{ duration: 0.65, ease: EASE }}
           className="mb-20 lg:mb-24"
         >
-          <span className="text-signal text-xs font-semibold uppercase tracking-[0.2em] block mb-5">
+          <span className="text-signal-text text-xs font-semibold uppercase tracking-[0.2em] block mb-5">
             02 — Prozess
           </span>
           <h2 className="font-display font-extrabold text-ink leading-[1.06] tracking-tight text-4xl sm:text-5xl lg:text-6xl xl:text-7xl max-w-4xl">

@@ -45,7 +45,7 @@ export default function ServiceCategories() {
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10"
         >
           <div>
-            <span className="text-signal text-xs font-semibold uppercase tracking-[0.2em] block mb-5">
+            <span className="text-signal-text text-xs font-semibold uppercase tracking-[0.2em] block mb-5">
               03 — Leistungen
             </span>
             <h2 className="font-display font-extrabold text-ink leading-[1.06] tracking-tight text-4xl sm:text-5xl lg:text-6xl">
@@ -83,8 +83,8 @@ export default function ServiceCategories() {
                 transition={{ duration: 0.5, delay: i * 0.06, ease: EASE }}
                 className="card-light flex-shrink-0 w-[260px] sm:w-[290px] p-6 group select-none"
               >
-                <div className="w-11 h-11 rounded-xl bg-signal/10 flex items-center justify-center mb-5 group-hover:bg-signal/16 transition-colors duration-300">
-                  <Icon size={21} className="text-signal" strokeWidth={1.75} />
+                <div className="w-11 h-11 rounded-xl bg-signal/15 flex items-center justify-center mb-5 group-hover:bg-signal/20 transition-colors duration-300">
+                  <Icon size={21} className="text-signal-text" strokeWidth={1.75} />
                 </div>
                 <h3 className="font-display font-bold text-lg text-ink mb-2 leading-snug">
                   {cat.title}
@@ -96,7 +96,7 @@ export default function ServiceCategories() {
                   {cat.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs font-medium px-2.5 py-1 rounded-full bg-ink/[0.07] text-ink-lo group-hover:bg-signal/12 group-hover:text-signal transition-colors duration-300"
+                      className="text-xs font-medium px-2.5 py-1 rounded-full bg-ink/[0.07] text-ink-lo group-hover:bg-signal/15 group-hover:text-signal-text transition-colors duration-300"
                     >
                       {tag}
                     </span>
@@ -104,7 +104,7 @@ export default function ServiceCategories() {
                 </div>
                 <a
                   href="#auftrag"
-                  className="inline-flex items-center gap-1.5 text-signal text-xs font-semibold opacity-0 group-hover:opacity-100 translate-x-[-4px] group-hover:translate-x-0 transition-all duration-200"
+                  className="inline-flex items-center gap-1.5 text-signal-text text-xs font-semibold opacity-0 group-hover:opacity-100 translate-x-[-4px] group-hover:translate-x-0 transition-all duration-200"
                 >
                   Auftrag anfragen <ArrowRight size={12} />
                 </a>
@@ -123,7 +123,7 @@ export default function ServiceCategories() {
           className="mt-8 text-sm text-ink-lo"
         >
           Ihre Dienstleistung ist nicht dabei?{' '}
-          <a href="#kontakt" className="text-signal hover:underline underline-offset-2">
+          <a href="#kontakt" className="text-signal-text hover:underline underline-offset-2">
             Nehmen Sie Kontakt auf
           </a>{' '}
           — wir prüfen, ob wir helfen können.

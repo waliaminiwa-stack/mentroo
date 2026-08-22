@@ -151,7 +151,7 @@ export default function RequestFlow() {
           transition={{ duration: 0.6, ease: EASE }}
           className="text-center mb-14"
         >
-          <span className="text-signal text-xs font-semibold uppercase tracking-[0.2em] block mb-4">
+          <span className="text-signal-text text-xs font-semibold uppercase tracking-[0.2em] block mb-4">
             01 — Anfrage
           </span>
           <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-ink leading-[1.08] tracking-tight">

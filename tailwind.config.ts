@@ -17,6 +17,7 @@ const config: Config = {
           darker: '#85b800',
           light: '#eaffa0',
           muted: '#c8f040',
+          text: '#4A7A00', // WCAG AA on white: ~5.2:1 — for text/icons on light backgrounds
         },
         // Dark surface system
         surface: {

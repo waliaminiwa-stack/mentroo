@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
 import { TrendingUp, Clock, Target, Shield, ArrowRight, Check } from 'lucide-react'
 
@@ -50,10 +51,17 @@ export default function ForBusinesses() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.72, ease: EASE }}
-            className="relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-[5/6] bg-surface-3 flex flex-col items-start justify-end p-6"
+            className="relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-[5/6] flex flex-col items-start justify-end p-6"
           >
-            {/* Decorative gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/60 to-transparent" />
+            <Image
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&auto=format&q=80"
+              alt="Handwerker bei der Arbeit"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            {/* Dark gradient so overlaid text/elements stay legible */}
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-brand-dark/40 to-brand-dark/10" />
 
             {/* Decorative elements */}
             <div className="absolute top-6 left-6 flex flex-col gap-3">

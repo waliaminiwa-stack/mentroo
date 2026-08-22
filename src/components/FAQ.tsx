@@ -58,7 +58,7 @@ export default function FAQ() {
           transition={{ duration: 0.6, ease: EASE }}
           className="text-center mb-14"
         >
-          <span className="text-signal text-xs font-semibold uppercase tracking-[0.2em]">
+          <span className="text-signal-text text-xs font-semibold uppercase tracking-[0.2em]">
             09 — FAQ
           </span>
           <h2 className="font-display font-extrabold text-ink text-4xl sm:text-5xl mt-4 leading-[1.08] tracking-tight">
@@ -81,7 +81,7 @@ export default function FAQ() {
                 key={i}
                 className={`rounded-xl border overflow-hidden transition-all duration-250 ${
                   isOpen
-                    ? 'border-signal/25 bg-signal/[0.03] shadow-[0_2px_12px_rgba(179,246,0,0.08)]'
+                    ? 'border-brand-dark/20 bg-brand-dark/[0.03] shadow-[0_2px_12px_rgba(20,50,95,0.08)]'
                     : 'border-ink/[0.09] bg-white hover:border-ink/[0.16] shadow-[0_1px_3px_rgba(21,37,61,0.05)]'
                 }`}
               >
@@ -92,7 +92,7 @@ export default function FAQ() {
                 >
                   <span
                     className={`font-medium text-sm sm:text-base transition-colors duration-200 ${
-                      isOpen ? 'text-signal' : 'text-ink'
+                      isOpen ? 'text-signal-text' : 'text-ink'
                     }`}
                   >
                     {faq.q}
@@ -101,7 +101,7 @@ export default function FAQ() {
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.25, ease: 'easeInOut' }}
                     className={`flex-shrink-0 transition-colors duration-200 ${
-                      isOpen ? 'text-signal' : 'text-ink-lo'
+                      isOpen ? 'text-signal-text' : 'text-ink-lo'
                     }`}
                   >
                     <ChevronDown size={18} />
@@ -134,7 +134,7 @@ export default function FAQ() {
           className="mt-8 text-center text-sm text-ink-lo"
         >
           Weitere Fragen?{' '}
-          <a href="#kontakt" className="text-signal hover:underline underline-offset-2">
+          <a href="#kontakt" className="text-signal-text hover:underline underline-offset-2">
             Schreiben Sie uns
           </a>
           .

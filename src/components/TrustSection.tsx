@@ -42,7 +42,7 @@ export default function TrustSection() {
           transition={{ duration: 0.65, ease: EASE }}
           className="mb-14 lg:mb-16"
         >
-          <span className="text-signal text-xs font-semibold uppercase tracking-[0.2em] block mb-5">
+          <span className="text-signal-text text-xs font-semibold uppercase tracking-[0.2em] block mb-5">
             06 — Versprechen
           </span>
           <h2 className="font-display font-extrabold text-ink leading-[1.06] tracking-tight text-4xl sm:text-5xl lg:text-6xl xl:text-7xl max-w-4xl">
@@ -64,8 +64,8 @@ export default function TrustSection() {
                 transition={{ duration: 0.55, delay: i * 0.09, ease: EASE }}
                 className="card-light p-6 flex flex-col gap-4"
               >
-                <div className="w-10 h-10 rounded-xl bg-signal/10 flex items-center justify-center flex-shrink-0">
-                  <Icon size={19} className="text-signal" strokeWidth={1.75} />
+                <div className="w-10 h-10 rounded-xl bg-signal/15 flex items-center justify-center flex-shrink-0">
+                  <Icon size={19} className="text-signal-text" strokeWidth={1.75} />
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-ink text-base leading-snug mb-2">

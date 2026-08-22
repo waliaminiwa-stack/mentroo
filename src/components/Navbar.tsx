@@ -30,21 +30,17 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? 'bg-[#08090A]/85 backdrop-blur-xl border-b border-white/6 shadow-[0_1px_0_rgba(255,255,255,0.04)]'
-            : 'bg-transparent'
-        }`}
+        className="fixed top-0 inset-x-0 z-50 transition-all duration-500 bg-white border-b border-ink/[0.08] shadow-[0_1px_8px_rgba(21,37,61,0.06)]"
       >
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          {/* Logo — always white on dark */}
+          {/* Logo — original brand colors on white */}
           <a href="#" className="flex items-center" aria-label="Mentroo Startseite">
             <img
               src="/logo/mentroo-logo.svg"
               alt="Mentroo"
               width={120}
               height={21}
-              className="h-5 w-auto brightness-0 invert"
+              className="h-5 w-auto"
             />
           </a>
 
@@ -54,7 +50,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-mid hover:text-hi transition-colors duration-200"
+                className="text-sm font-medium text-ink-mid hover:text-ink transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -80,7 +76,7 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden p-2 rounded-lg text-mid hover:text-hi hover:bg-white/6 transition-colors"
+            className="md:hidden p-2 rounded-lg text-ink-mid hover:text-ink hover:bg-ink/[0.06] transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? 'Menü schließen' : 'Menü öffnen'}
             aria-expanded={menuOpen}
@@ -98,7 +94,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.25, ease: 'easeOut' }}
-            className="fixed inset-0 z-40 bg-[#08090A]/97 backdrop-blur-xl pt-16 px-6 flex flex-col"
+            className="fixed inset-0 z-40 bg-white pt-16 px-6 flex flex-col"
           >
             <nav className="flex flex-col gap-0 pt-8" aria-label="Mobile Navigation">
               {navLinks.map((link, i) => (
@@ -109,7 +105,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, x: -16 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.06, duration: 0.25 }}
-                  className="text-hi/80 hover:text-hi text-3xl font-display font-bold py-4 border-b border-white/6 transition-colors"
+                  className="text-ink hover:text-brand-dark text-3xl font-display font-bold py-4 border-b border-ink/[0.08] transition-colors"
                 >
                   {link.label}
                 </motion.a>
@@ -126,7 +122,7 @@ export default function Navbar() {
               <a
                 href="#fachbetriebe"
                 onClick={() => setMenuOpen(false)}
-                className="w-full text-center border border-white/12 text-mid hover:text-hi font-medium py-4 rounded-full text-base transition-colors"
+                className="w-full text-center border border-ink/[0.14] text-ink-mid hover:text-ink font-medium py-4 rounded-full text-base transition-colors"
               >
                 Als Fachbetrieb mitmachen
               </a>

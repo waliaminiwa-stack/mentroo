@@ -54,7 +54,7 @@ function Field({
     <div className="flex flex-col gap-1.5">
       <label htmlFor={id} className="text-sm font-medium text-ink-mid">
         {label}
-        {required && <span className="text-signal ml-0.5">*</span>}
+        {required && <span className="text-signal-text ml-0.5">*</span>}
       </label>
       {children}
       {error && <p className="text-xs text-red-400">{error}</p>}
@@ -128,7 +128,7 @@ export default function ContactForm() {
             transition={{ duration: 0.6, ease: EASE }}
             className="lg:col-span-2"
           >
-            <span className="text-signal text-xs font-semibold uppercase tracking-[0.2em] block mb-4">
+            <span className="text-signal-text text-xs font-semibold uppercase tracking-[0.2em] block mb-4">
               08 — Kontakt
             </span>
             <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-ink leading-[1.08] tracking-tight mb-5">
@@ -137,7 +137,7 @@ export default function ContactForm() {
             <p className="text-ink-mid leading-relaxed mb-8">
               Nutzen Sie dieses Formular für ausführliche Anfragen, wiederkehrende Aufträge
               oder wenn Sie uns als Fachbetrieb ansprechen möchten. Alle Felder mit{' '}
-              <span className="text-signal">*</span> sind Pflichtfelder.
+              <span className="text-signal-text">*</span> sind Pflichtfelder.
             </p>
 
             <div className="space-y-4 text-sm">
@@ -164,8 +164,8 @@ export default function ContactForm() {
           >
             {success ? (
               <div className="rounded-2xl bg-white border border-ink/[0.09] p-10 text-center shadow-[0_4px_20px_rgba(21,37,61,0.07)]">
-                <div className="w-14 h-14 rounded-full bg-signal/10 flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle2 size={28} className="text-signal" />
+                <div className="w-14 h-14 rounded-full bg-signal/15 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle2 size={28} className="text-signal-text" />
                 </div>
                 <h3 className="font-display font-bold text-2xl text-ink mb-2">Vielen Dank!</h3>
                 <p className="text-ink-mid leading-relaxed max-w-sm mx-auto">
@@ -344,13 +344,13 @@ export default function ContactForm() {
                       Ich habe die{' '}
                       <a
                         href="/datenschutz"
-                        className="text-signal hover:underline underline-offset-2"
+                        className="text-signal-text hover:underline underline-offset-2"
                       >
                         Datenschutzerklärung
                       </a>{' '}
                       gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner
                       Anfrage zu.
-                      <span className="text-signal ml-0.5">*</span>
+                      <span className="text-signal-text ml-0.5">*</span>
                     </span>
 
                   </label>

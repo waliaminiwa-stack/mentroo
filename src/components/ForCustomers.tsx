@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
 import { Check, ArrowRight } from 'lucide-react'
 
@@ -28,7 +29,7 @@ export default function ForCustomers() {
           transition={{ duration: 0.65, ease: EASE }}
           className="mb-16 lg:mb-20"
         >
-          <span className="text-signal text-xs font-semibold uppercase tracking-[0.2em] block mb-5">
+          <span className="text-signal-text text-xs font-semibold uppercase tracking-[0.2em] block mb-5">
             04 — Auftraggeber
           </span>
           <h2 className="font-display font-extrabold text-ink leading-[1.06] tracking-tight text-4xl sm:text-5xl lg:text-6xl xl:text-7xl max-w-5xl">
@@ -45,11 +46,18 @@ export default function ForCustomers() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.72, ease: EASE }}
-            className="relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-[5/6] bg-surface-3 flex flex-col items-start justify-end p-6"
+            className="relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-[5/6] flex flex-col items-start justify-end p-6"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/40 to-transparent" />
-            <div className="absolute top-6 right-6 w-16 h-16 rounded-xl bg-signal/10 flex items-center justify-center">
-              <Check size={24} className="text-signal" strokeWidth={1.5} />
+            <Image
+              src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=900&auto=format&q=80"
+              alt="Auftraggeber bespricht Auftrag mit Fachbetrieb"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/70 via-brand-dark/20 to-transparent" />
+            <div className="absolute top-6 right-6 w-14 h-14 rounded-xl bg-white/15 backdrop-blur-sm flex items-center justify-center border border-white/20">
+              <Check size={22} className="text-white" strokeWidth={1.5} />
             </div>
 
             <div className="relative z-10 bg-surface-1/90 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3">
@@ -85,8 +93,8 @@ export default function ForCustomers() {
                   transition={{ duration: 0.4, delay: 0.05 + i * 0.07, ease: EASE }}
                   className="flex items-start gap-3.5"
                 >
-                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-signal/12 flex items-center justify-center mt-0.5">
-                    <Check size={11} className="text-signal" strokeWidth={2.5} />
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-signal/15 flex items-center justify-center mt-0.5">
+                    <Check size={11} className="text-signal-text" strokeWidth={2.5} />
                   </div>
                   <span className="text-ink-mid text-sm leading-snug">{benefit}</span>
                 </motion.li>
