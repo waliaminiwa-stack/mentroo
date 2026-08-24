@@ -34,7 +34,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo — original brand colors on white */}
-          <a href="#" className="flex items-center" aria-label="Mentroo Startseite">
+          <a href="/" className="flex items-center" aria-label="Mentroo Startseite">
             <img
               src="/logo/mentroo-logo.svg"
               alt="Mentroo"

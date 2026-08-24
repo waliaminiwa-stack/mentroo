@@ -33,7 +33,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 pb-12 border-b border-white/8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <a href="#" className="inline-block mb-4" aria-label="Mentroo Startseite">
+            <a href="/" className="inline-block mb-4" aria-label="Mentroo Startseite">
               <img
                 src="/logo/mentroo-logo.svg"
                 alt="Mentroo"

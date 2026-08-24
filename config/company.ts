@@ -1,18 +1,15 @@
 export const company = {
   name: 'Mentroo',
-  legalName: 'Mentroo GmbH',
-  email: '[E-Mail-Adresse]',
-  phone: '[Telefonnummer]',
+  legalName: 'Mentroo',
+  managing: 'U. Amini',
+  email: 'info@mentroo.de',
+  phone: '0160 5074395',
   address: {
-    street: '[Straße und Hausnummer]',
-    city: '[Stadt]',
-    postalCode: '[PLZ]',
+    street: 'Barmbeker Straße 9a',
+    city: 'Hamburg',
+    postalCode: '22303',
     country: 'Deutschland',
   },
-  managing: '[Geschäftsführer]',
-  hrb: '[Handelsregisternummer]',
-  court: '[Registergericht]',
-  vatId: '[Umsatzsteuer-ID]',
   meta: {
     title: 'Mentroo – Ihr Auftrag, der passende Fachbetrieb',
     description:
