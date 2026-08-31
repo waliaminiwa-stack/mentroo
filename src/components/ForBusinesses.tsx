@@ -51,44 +51,59 @@ export default function ForBusinesses() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.72, ease: EASE }}
-            className="relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-[5/6] flex flex-col items-start justify-end p-6"
+            className="flex flex-col gap-4"
           >
-            <Image
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&auto=format&q=80"
-              alt="Handwerker bei der Arbeit"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-            {/* Dark gradient so overlaid text/elements stay legible */}
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-brand-dark/40 to-brand-dark/10" />
+            {/* Image container */}
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-[5/6] flex flex-col items-start justify-end p-6">
+              <Image
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&auto=format&q=80"
+                alt="Handwerker bei der Arbeit"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              {/* Dark gradient so overlaid text/elements stay legible */}
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-brand-dark/40 to-brand-dark/10" />
 
-            {/* Decorative elements */}
-            <div className="absolute top-6 left-6 flex flex-col gap-3">
-              {processSteps.map((step, i) => (
-                <motion.div
-                  key={i}
-                  initial={reduced ? {} : { opacity: 0, x: -12 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.3 + i * 0.1, ease: EASE }}
-                  className="flex items-center gap-2.5"
-                >
-                  <div className="w-5 h-5 rounded-full border border-signal/50 bg-signal/10 flex items-center justify-center flex-shrink-0">
-                    <Check size={10} className="text-signal" strokeWidth={2.5} />
-                  </div>
-                  <span className="text-xs text-white/50 leading-snug">{step}</span>
-                </motion.div>
-              ))}
+              {/* Checklist overlay — desktop only */}
+              <div className="absolute top-6 left-6 hidden lg:flex flex-col gap-3">
+                {processSteps.map((step, i) => (
+                  <motion.div
+                    key={i}
+                    initial={reduced ? {} : { opacity: 0, x: -12 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.3 + i * 0.1, ease: EASE }}
+                    className="flex items-center gap-2.5"
+                  >
+                    <div className="w-5 h-5 rounded-full border border-signal/50 bg-signal/10 flex items-center justify-center flex-shrink-0">
+                      <Check size={10} className="text-signal" strokeWidth={2.5} />
+                    </div>
+                    <span className="text-xs text-white/50 leading-snug">{step}</span>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Floating badge */}
+              <div className="relative z-10 bg-surface-1/90 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-signal animate-pulse" />
+                  <span className="text-sm font-semibold text-hi">Für Fachbetriebe</span>
+                </div>
+                <p className="text-xs text-mid mt-0.5">Geprüfte Betriebe im Netzwerk</p>
+              </div>
             </div>
 
-            {/* Floating badge */}
-            <div className="relative z-10 bg-surface-1/90 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-signal animate-pulse" />
-                <span className="text-sm font-semibold text-hi">Für Fachbetriebe</span>
-              </div>
-              <p className="text-xs text-mid mt-0.5">Geprüfte Betriebe im Netzwerk</p>
+            {/* Checklist — mobile only, displayed below image */}
+            <div className="flex flex-col gap-3 lg:hidden">
+              {processSteps.map((step, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <div className="w-5 h-5 mt-0.5 rounded-full border border-signal/60 bg-signal/15 flex items-center justify-center flex-shrink-0">
+                    <Check size={10} className="text-signal" strokeWidth={2.5} />
+                  </div>
+                  <span className="text-sm text-white/70 leading-snug">{step}</span>
+                </div>
+              ))}
             </div>
           </motion.div>
 

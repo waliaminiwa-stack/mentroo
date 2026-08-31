@@ -4,6 +4,7 @@ import { useState, FormEvent, useId } from 'react'
 import { motion } from 'framer-motion'
 import { CheckCircle2 } from 'lucide-react'
 import { CONTACT_FORM_LABELS, TIMEFRAME_OPTIONS } from '@/lib/services'
+import { company } from '../../config/company'
 
 const EASE = [0.21, 0.47, 0.32, 0.98] as const
 
@@ -144,12 +145,22 @@ export default function ContactForm() {
               <div>
                 <span className="text-ink-lo">E-Mail</span>
                 <br />
-                <span className="text-ink font-medium">[E-Mail-Adresse]</span>
+                <a
+                  href={`mailto:${company.email}`}
+                  className="text-ink font-medium hover:text-signal-text transition-colors"
+                >
+                  {company.email}
+                </a>
               </div>
               <div>
                 <span className="text-ink-lo">Telefon</span>
                 <br />
-                <span className="text-ink font-medium">[Telefonnummer]</span>
+                <a
+                  href={`tel:+49${company.phone.replace(/^0/, '').replace(/\s/g, '')}`}
+                  className="text-ink font-medium hover:text-signal-text transition-colors"
+                >
+                  {company.phone}
+                </a>
               </div>
             </div>
           </motion.div>
